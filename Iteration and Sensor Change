@@ -1,0 +1,73 @@
+# Knock Detection Prototype – From PIR to MAX4466 Microphone  
+### *Iteration and refinement of the Chrono Lumina prototype*
+
+---
+
+## Overview
+
+After testing the PIR motion sensor, I decided to **replace it with a MAX4466 microphone** to improve responsiveness and achieve a more interactive design.  
+This new version of my prototype introduced **sound-based detection**, allowing the system to react to knocking sounds instead of motion.
+
+The idea was to turn the act of *knocking on a door* into a connected interaction, where the **Vespera light responds instantly** through colour and motion.
+
+---
+
+## Build and Implementation
+
+- Replaced the **PIR motion sensor** with a **MAX4466 analog microphone**.  
+- **Soldered** the microphone onto the **Arduino MKR WiFi 1010** for a stable connection.  
+- Uploaded a simplified **test sketch** to verify sensor readings and WiFi functionality.  
+- Tuned the **threshold values** in the code to detect intentional knocks while filtering out background noise.  
+- Achieved a **faster and more consistent response** compared to the previous PIR setup.  
+- Tested on different surfaces to identify the most effective sensitivity range and acoustic response.
+
+---
+
+## Interaction Concept
+
+The physical form was inspired by a **Christmas house decoration**, which became both the aesthetic enclosure and the symbolic “home” of my IoT system.
+
+**Interaction logic:**
+1. A user knocks on the “door” of the Christmas house.  
+2. The **MAX4466 microphone** senses the knock and sends a signal via WiFi to the **MQTT broker**.  
+3. **Vespera**, subscribed to the same topic, receives the “knock” message.  
+4. It responds immediately with a **Blue → Red → Green** colour sequence ,  a visual “greeting light.”  
+
+This approach combined storytelling, interaction design, and IoT technology into a single tangible experience.
+
+---
+
+## Observation
+
+- The **response speed** was noticeably faster than with the PIR sensor,  almost instantaneous upon detecting a knock.  
+- The system became **more predictable and reliable**, responding accurately to configured knocks while ignoring random background noise.  
+- This improvement made the interaction feel **more engaging and human-like**, reinforcing the metaphor of knocking on a door to “communicate” with the environment.  
+- Visually, it created a charming and intuitive connection: **a house that listens and responds with light.**
+
+---
+
+## Reflection
+
+This stage helped me deepen my understanding of:
+- **Data thresholds and noise filtering** , how to distinguish valid signals from ambient sound.  
+- The trade-off between **speed and accuracy** in sensor-based systems.  
+- **Iterative design**, how replacing a single component can completely change the quality of interaction.  
+- The **MQTT workflow**, sending and receiving live data became more transparent and easier to test, giving me confidence in real-time system debugging and calibration.
+
+By experimenting and iterating, I learned that success in IoT design comes not from getting it perfect the first time, but from **learning through adaptation**.
+
+---
+
+## Next Steps
+
+- Finalise the **Arduino knock detection code** for maximum reliability.  
+- Connect the device to the **MQTT broker** and monitor live data flow.  
+- Demonstrate full end-to-end interaction during the **presentation**, showing how a simple knock can trigger a dynamic, real-time light response on Vespera.
+
+---
+
+> *“Iteration turned a simple light sensor into a living interface — one that listens, reacts, and connects the physical world with digital expression.”*  
+> — *Madina Diallo*
+
+---
+
