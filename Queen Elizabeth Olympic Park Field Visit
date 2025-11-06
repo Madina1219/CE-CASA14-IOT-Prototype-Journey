@@ -1,0 +1,80 @@
+
+# Exploring IoT and Connected Environments at Queen Elizabeth Olympic Park (QEOP)
+
+## Overview
+This README documents our group walk and learning experience at **Queen Elizabeth Olympic Park (QEOP)**, exploring how the site operates as a living testbed for the Internet of Things (IoT) and Connected Environments. 
+The walk highlighted how digital infrastructure, sustainability goals, and data-driven innovation intersect to create smarter and more sustainable urban systems.
+
+---
+
+## 1. Introduction and Context
+QEOP was developed as part of the London 2012 Olympic legacy, transforming East London into a **hub for innovation, sustainability, and digital experimentation**. The site now serves as a *smart city testbed* where academic institutions, local authorities, and industry collaborate to apply IoT technologies for better urban management.
+
+The park’s development ties closely with **SHIFT Digital Frontiers**, a collaborative project between **UCL**, **Arup**, **LLDC**, and other partners. SHIFT promotes a data ecosystem vision that enables real-time insights, digital twins, and open data to inform policy and environmental planning.
+
+---
+
+## 2. Field Observations and Discussions
+
+### 2.1 Digital Infrastructure and Connectivity
+- QEOP offers **open-source public Wi-Fi** across the park, representing one of London’s early steps toward inclusive smart infrastructure.  
+- Systems like **CCTV, public access points, and digital utilities** connect through secure networks, supporting live monitoring of public safety and activity.  
+
+### 2.2 Smart Environmental Monitoring
+We discussed how different sensors are deployed to collect real-time environmental data:  
+- **Pedestrian flow sensors**, for counting visitors and understanding movement patterns.  
+- **Water quality sensors** ,  for monitoring the canal and wetland health.  
+- **Air temperature and humidity sensors**, to study microclimate variations.  
+- **Energy meters**, measuring usage across buildings like the Copper Box Arena.  
+
+We also examined **Mandy’s urban microclimate sensor**, which records temperature and humidity every 5 minutes before entering low-power sleep mode. This energy-efficient IoT design minimises data load while supporting long-term **climate mitigation research**.
+
+### 2.3 Power and Placement of Sensors
+- Sensors are installed mainly on **lamp posts** to ensure stable power supply and reduce vandalism risk.  
+- **Weather stations** and **data loggers** send information to gateways using **LoRaWAN mesh networks**, contributing to a continuous environmental data flow.  
+- These systems inform planning and policy decisions about **urban heat**, **energy management**, and **wildlife activity** (e.g., bat sound sensors).  
+
+### 2.4 Data Platforms and Governance
+The park functions as a **data ecosystem** aligned with FAIR principles; *Findable, Accessible, Interoperable, and Reusable*.  
+- The **SHIFT Digital Frontiers** initiative aims to unify real-time, spatial, and static datasets through an open platform.  
+- Digital twin models simulate environmental and human activity.  
+- Open APIs and citizen data collection enable public engagement and transparency.  
+
+---
+
+## 3. Key Learnings
+
+### 3.1 QEOP as a Living IoT Testbed
+QEOP exemplifies how physical infrastructure and digital systems can merge to create **responsive urban environments**. The park acts as both a research lab and a community asset where innovation meets real-world application.
+
+### 3.2 Sustainability and Energy
+The integration of smart energy meters, renewable testing zones, and climate sensors supports London’s **Net Zero by 2030** goals. Projects like SHIFT help prototype scalable energy-saving technologies.
+
+### 3.3 Policy and Ethics
+Our discussion on discontinued pilot systems emphasised **the cost-benefit and ethical evaluation** of sensor-based surveillance. Data collection must balance innovation with transparency, privacy, and community trust.
+
+### 3.4 Connected Governance
+QEOP demonstrates that **data governance and inclusivity** are as important as technology itself. Community participation, data transparency, and shared ownership ensure the park’s smart infrastructure benefits everyone.
+
+---
+
+## 4. Relevance to IoT and Connected Environments Module
+This field visit reflected core learning outcomes from our module:
+- Applying **IoT design thinking** to real-world urban contexts.  
+- Understanding **sensor networks, power management, and data visualisation**.  
+- Evaluating **policy, ethics, and stakeholder roles** in Connected Environments.  
+- Observing how **open data and interoperability** drive smarter decision-making in cities.  
+
+---
+
+## 5. Conclusion
+Our walk through QEOP provided a tangible understanding of how IoT principles operate at city scale, from individual sensors to complex data ecosystems. The park is a **model of innovation, sustainability, and inclusion**, offering a blueprint for future smart city developments.
+
+> “Connected environments are not only about connecting devices — they are about connecting people, places, and data to create better futures.”
+
+---
+
+## References
+- *SHIFT Digital Frontiers: A Data Ecosystem Roadmap at Queen Elizabeth Olympic Park* (UCL, Arup, LLDC, 2024)  
+- Field notes from QEOP Walk (2025)  
+- UCL CASA – Connected Environments Lab  
