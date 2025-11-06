@@ -11,7 +11,7 @@ This marked the transition from local experimentation to a **fully networked IoT
 
 ---
 
-## 📡 System Flow
+## System Flow
 
 1. **Arduino Connection:**  
    The Arduino was connected to WiFi using stored credentials. Once connected, it published data to a unique MQTT topic (e.g., `student/CASA0014/luminaire/ID`).
@@ -50,7 +50,7 @@ It demonstrated how IoT can make environmental sensing , sound, motion, presence
 
 ---
 
-## 🔍 Technical Summary
+## Technical Summary
 - **Microcontroller:** Arduino MKR WiFi 1010  
 - **Sensor:** MAX4466 analog microphone (sound detection)  
 - **Communication Protocol:** MQTT via `mqtt.cetools.org`  
@@ -61,7 +61,7 @@ It demonstrated how IoT can make environmental sensing , sound, motion, presence
 
 ---
 
-## 🧠 Reflection
+## Reflection
 This milestone taught me how **connectivity transforms local prototypes into distributed systems**.  
 What once existed as a closed hardware loop (sensor → LED) became part of a global network.  
 It reinforced the importance of:
