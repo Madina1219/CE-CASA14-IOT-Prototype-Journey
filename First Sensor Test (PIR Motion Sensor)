@@ -1,21 +1,110 @@
-.Used PIR to detect detect presence in the lab and trigger Vespera via MQTT.
-.During testing, I noticed that the PIR sensor took a long time to calibrate after powering on.
-.Even after calibration, the motion detection felt delayed,it didn’t react immediately when I moved or moved my hands in front of it.
-.I tried adjusting the code and some timing variables to make it more responsive, but I was still not getting the fast reaction I needed.
-.Despite reuploading and testing several times, the sensor response stayed inconsistent.
-.I realised the PIR sensor’s nature is to detect infrared changes (body heat movement) rather than instant gestures, which can naturally cause a short delay.
+# PIR Motion Sensor → Vespera Light Control (MQTT)
 
- * Reflection
-.Because I only had two minutes to present my project on “Show and Tell” day, I felt that relying on a slower, unpredictable sensor could make my demo unreliable.
-.I wanted to show an immediate, visible response between my sensor input and Vespera’s light output.
-.That’s when I decided to move away from the PIR and look for a faster trigger method.
-.I went back to all the assessment guides and understood that my goal at this stage was to demonstrate understanding, not complexity, and reliability mattered more than ambition.
+> **Arduino MKR WiFi 1010 + PIR Motion Sensor Prototype**  
+> UCL CASA0014 – *Prototyping the Internet of Things (Connected Environments)*  
 
-*Lesson Learned
-.Not all sensors respond at the same speed. PIR sensors need time to calibrate and can be sensitive to environment temperature and movement distance.
-.Testing early helps identify performance issues before the final day.
-.Sometimes, simplifying the system leads to a clearer and more successful demonstration.
+![Arduino Badge](https://img.shields.io/badge/Arduino-MKR1010-blue)
+![WiFi Badge](https://img.shields.io/badge/WiFiNINA-Library-orange)
+![MQTT Badge](https://img.shields.io/badge/MQTT-PubSubClient-green)
+![IoT Badge](https://img.shields.io/badge/IoT-Connected%20Environments-lightgrey)
 
-*Next Step
-.I chose to switch to a MAX4466 microphone sensor, which could detect knock sounds and send data instantly.
-.This seemed a better option for my time-limited presentation, allowing me to demonstrate a quick and clear response.
+---
+
+## Overview
+
+This prototype used a **PIR (Passive Infrared) sensor** to detect human presence in the lab and **trigger a Vespera light** via **MQTT**.  
+The aim was to demonstrate how motion detection can be used to interact with IoT-connected lighting systems.  
+
+During testing, several challenges emerged around **sensor responsiveness**, **calibration delays**, and **real-time reactivity**, which influenced my design decisions and led to a pivot in my approach.
+
+---
+
+## Hardware Setup
+
+### Components
+| Component | Description |
+|------------|-------------|
+| **Arduino MKR WiFi 1010** | Microcontroller with built-in Wi-Fi |
+| **PIR Motion Sensor** | Detects infrared radiation (body heat) movement |
+| **Vespera Light** | MQTT-based connected light system |
+| **Jumper Wires & Breadboard** | For temporary connections |
+
+### 🔌 Wiring Diagram
+
+    +---------------------------+
+    |  Arduino MKR WiFi 1010    |
+    |---------------------------|
+    |  5V  ---->  VCC (PIR)     |
+    |  GND ---->  GND (PIR)     |
+    |  D2  ---->  OUT (PIR)     |
+    |---------------------------|
+    |  LED_BUILTIN = Status LED |
+    +---------------------------+
+
+
+*The PIR sensor requires around **30–60 seconds** to calibrate after powering on.*
+
+---
+
+## Testing Observations
+
+- The **PIR sensor** successfully triggered the Vespera light through **MQTT messages** when motion was detected.  
+- However, I noticed that:
+  - The PIR sensor took a **long time to calibrate** after powering on.  
+  - Even after calibration, **motion detection felt delayed**, and it didn’t react immediately when I moved or waved my hands.  
+  - I tried adjusting **code timing variables** to increase responsiveness but still encountered lag.  
+  - Re-uploading and re-testing multiple times showed **inconsistent response speed**.  
+  - I realised that the PIR sensor detects **infrared changes (body heat)** rather than **instant gestures**, which naturally introduces a short delay.
+
+---
+
+## Reflection
+
+Because I only had **two minutes** to present my project on *Show and Tell Day*, relying on a slower, unpredictable sensor risked making my demo **unreliable**.  
+I wanted to create a **visible, immediate link** between my input (sensor trigger) and **Vespera’s light output**.
+
+Revisiting the assessment guide reminded me that my goal was to **demonstrate understanding**, not complexity.  
+At this stage, **reliability and clarity** were more valuable than ambition.
+
+This reflection led me to **pivot** from motion-based detection to **sound-based input** — a decision driven by both technical performance and presentation constraints.
+
+---
+
+## Lessons Learned
+
+| Lesson | Insight |
+|---------|----------|
+| **1. Sensor performance varies.** | PIR sensors are slower because they detect **heat-based motion**, not instantaneous movement. |
+| **2. Calibration is critical.** | PIR sensors need time to adjust to ambient temperature before they can detect reliably. |
+| **3. Environment matters.** | Warm rooms or distant movement can cause delayed or missed triggers. |
+| **4. Test early and often.** | Early trials reveal performance limits long before presentation day. |
+| **5. Simplification improves clarity.** | A simpler system can better communicate understanding than an unreliable complex one. |
+
+---
+
+## Next Steps – Transition to MAX4466 Microphone Sensor
+
+After evaluating the PIR’s limitations, I decided to switch to a **MAX4466 analog microphone sensor** that could detect **knock sounds** and send signals **instantly**.
+
+| Change and Benefit |
+
+| From PIR → MAX4466 i had a Faster and more reliable response |
+| From Infrared → Audio it Detected instant knocks instead of slow heat movement |
+| From motion → sound gesture it Provided clear, time-limited input for a short presentation |
+
+This transition allowed me to **demonstrate immediate interaction** between a simple physical action (a knock) and the **Vespera light’s response**, creating a stronger, more engaging IoT prototype.
+
+---
+
+## Key Takeaways
+- PIR sensors are **excellent for room presence detection**, but **not ideal for quick, timed reactions**.  
+- **Environmental temperature** and **sensor warm-up time** affect performance.  
+- **Choosing the right sensor** for the right context is as important as the code itself.  
+- **Iterative prototyping** testing, observing, adapting—is key to successful IoT design.  
+- Simplicity and reliability often communicate ideas **better than technical complexity**.
+
+---
+
+
+
+
